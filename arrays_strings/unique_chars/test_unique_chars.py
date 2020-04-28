@@ -1,4 +1,13 @@
 from nose.tools import assert_equal
+import import_ipynb
+from .unique_chars_challenge import UniqueChars
+import pytest
+
+
+@pytest.fixture
+def func():
+    test = UniqueChars()
+    return lambda string: test.has_unique_chars(string)
 
 
 class TestUniqueChars(object):

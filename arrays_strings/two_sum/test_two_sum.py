@@ -1,4 +1,6 @@
 from nose.tools import assert_equal, assert_raises
+import import_ipynb
+from .two_sum_challenge import Solution
 
 
 class TestTwoSum(object):

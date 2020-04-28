@@ -1,4 +1,6 @@
 from nose.tools import assert_equal
+import import_ipynb # or nbimporter
+from .foo_challenge import foo
 
 
 class TestFoo(object):

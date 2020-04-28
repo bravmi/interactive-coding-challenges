@@ -1,4 +1,13 @@
 from nose.tools import assert_equal
+import import_ipynb
+from .reverse_string_challenge import ReverseString
+import pytest
+
+
+@pytest.fixture
+def func():
+    test = ReverseString()
+    return lambda chars: test.reverse(chars)
 
 
 class TestReverse(object):
