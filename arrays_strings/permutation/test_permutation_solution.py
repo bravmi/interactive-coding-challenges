@@ -1,4 +1,13 @@
 from nose.tools import assert_equal
+import import_ipynb
+from .permutation_challenge import Permutations
+import pytest
+
+
+@pytest.fixture
+def func():
+    test = Permutations()
+    return lambda str1, str2: test.is_permutation(str1, str2)
 
 
 class TestPermutation(object):
