@@ -1,4 +1,12 @@
 from nose.tools import assert_equal
+import import_ipynb
+from .better_compress_challenge import compress_string
+import pytest
+
+
+@pytest.fixture
+def func():
+    return lambda string: compress_string(string)
 
 
 class TestCompress(object):
