@@ -1,4 +1,6 @@
 from nose.tools import assert_equal
+import import_ipynb
+from .rotation_challenge import Rotation
 
 
 class TestRotation(object):
