@@ -1,11 +1,17 @@
 from nose.tools import assert_equal
-
+import import_ipynb
+from .bst_challenge import Bst
+from ..utils.results import Results
+from .dfs import *
 
 class TestTree(object):
 
-    def __init__(self):
+    def setup_method(self):
         self.results = Results()
-
+        
+    def teardown_method(self):
+        self.results.clear_results()
+    
     def test_tree_one(self):
         bst = Bst()
         bst.insert(5)
@@ -15,7 +21,6 @@ class TestTree(object):
         bst.insert(3)
         in_order_traversal(bst.root, self.results.add_result)
         assert_equal(str(self.results), '[1, 2, 3, 5, 8]')
-        self.results.clear_results()
 
     def test_tree_two(self):
         bst = Bst()
