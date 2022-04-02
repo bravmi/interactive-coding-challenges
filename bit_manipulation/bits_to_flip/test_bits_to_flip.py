@@ -1,4 +1,6 @@
 from nose.tools import assert_equal
+import import_ipynb
+from .bits_to_flip_challenge import Bits
 
 
 class TestBits(object):
