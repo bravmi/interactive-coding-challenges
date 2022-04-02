@@ -1,4 +1,6 @@
 from nose.tools import assert_equal, assert_raises
+import import_ipynb
+from .hash_map_challenge import HashTable
 
 
 class TestHashMap(object):
